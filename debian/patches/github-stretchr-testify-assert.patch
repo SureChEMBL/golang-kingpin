@@ -1,0 +1,55 @@
+Description: Import github.com/stretchr/testify/assert
+ This patch uses the above package for testing assertions, which avoids
+ an unnecessary dependency on github.com/alecthomas/assert including
+ further dependent packages. The main difference between the packages
+ is that the latter outputs a colorized diff in case of inequality.
+Author: Peter Colberg <peter@colberg.org>
+Forwarded: not-needed
+Last-Update: 2016-03-07
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/app_test.go
++++ b/app_test.go
+@@ -6 +6 @@
+-	"github.com/alecthomas/assert"
++	"github.com/stretchr/testify/assert"
+--- a/args_test.go
++++ b/args_test.go
+@@ -7 +7 @@
+-	"github.com/alecthomas/assert"
++	"github.com/stretchr/testify/assert"
+--- a/cmd_test.go
++++ b/cmd_test.go
+@@ -6 +6 @@
+-	"github.com/alecthomas/assert"
++	"github.com/stretchr/testify/assert"
+--- a/completions_test.go
++++ b/completions_test.go
+@@ -6 +6 @@
+-	"github.com/alecthomas/assert"
++	"github.com/stretchr/testify/assert"
+--- a/flags_test.go
++++ b/flags_test.go
+@@ -7 +7 @@
+-	"github.com/alecthomas/assert"
++	"github.com/stretchr/testify/assert"
+--- a/parser_test.go
++++ b/parser_test.go
+@@ -8 +8 @@
+-	"github.com/alecthomas/assert"
++	"github.com/stretchr/testify/assert"
+--- a/parsers_test.go
++++ b/parsers_test.go
+@@ -9 +9 @@
+-	"github.com/alecthomas/assert"
++	"github.com/stretchr/testify/assert"
+--- a/usage_test.go
++++ b/usage_test.go
+@@ -8 +8 @@
+-	"github.com/alecthomas/assert"
++	"github.com/stretchr/testify/assert"
+--- a/values_test.go
++++ b/values_test.go
+@@ -6 +6 @@
+-	"github.com/alecthomas/assert"
++	"github.com/stretchr/testify/assert"

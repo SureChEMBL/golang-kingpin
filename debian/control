@@ -1,0 +1,26 @@
+Source: golang-gopkg-alecthomas-kingpin.v2
+Section: devel
+Priority: extra
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Peter Colberg <peter@colberg.org>
+Build-Depends: debhelper (>= 10),
+               dh-golang (>= 1.10~),
+               golang-any,
+               golang-github-alecthomas-units-dev,
+               golang-github-stretchr-testify-dev
+Standards-Version: 3.9.8
+Homepage: https://github.com/alecthomas/kingpin
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/golang-gopkg-alecthomas-kingpin.v2.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-go/packages/golang-gopkg-alecthomas-kingpin.v2.git
+XS-Go-Import-Path: gopkg.in/alecthomas/kingpin.v2
+
+Package: golang-gopkg-alecthomas-kingpin.v2-dev
+Architecture: all
+Depends: golang-github-alecthomas-units-dev,
+         golang-github-stretchr-testify-dev,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: command-line and flag parser for Go
+ This package provides a fluent-style, type-safe command-line parser.
+ It supports flags, nested commands, positional arguments, customizable
+ help output using Go templates, and automatically generated man pages.
